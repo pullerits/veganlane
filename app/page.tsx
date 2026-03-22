@@ -1,6 +1,7 @@
 import CategoryCard from "@/components/CategoryCard";
 import RecipeCard from "@/components/RecipeCard";
 import Hero from "@/components/Hero";
+import QuoteSection from "@/components/QuoteSection";
 import { getAllCategories, getAllRecipes } from "@/lib/recipes";
 
 export default function Home() {
@@ -26,8 +27,8 @@ export default function Home() {
               Mida soovid valmistada?
             </h2>
             <div className="mx-auto mt-12 grid max-w-4xl gap-5 sm:grid-cols-2">
-              {categories.map((cat) => (
-                <CategoryCard key={cat.slug} category={cat} />
+              {categories.map((cat, i) => (
+                <CategoryCard key={cat.slug} category={cat} index={i} />
               ))}
             </div>
           </div>
@@ -53,17 +54,7 @@ export default function Home() {
         )}
 
         {/* Quote section */}
-        <section className="bg-jewel-green px-6 py-28 text-center text-white lg:px-10">
-          <div className="mx-auto max-w-2xl">
-            <blockquote className="text-2xl font-light leading-relaxed italic sm:text-3xl">
-              &ldquo;Iga taimne eine on samm parema tervise ja puhtama planeedi
-              poole.&rdquo;
-            </blockquote>
-            <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.3em] text-white/50">
-              Veganlane
-            </p>
-          </div>
-        </section>
+        <QuoteSection />
       </div>
     </>
   );

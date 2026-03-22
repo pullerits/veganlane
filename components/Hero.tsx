@@ -8,25 +8,20 @@ export default function Hero() {
   const imgRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let ticking = false;
     const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const vh = window.innerHeight;
-        const y = window.scrollY;
-        const progress = Math.min(y / (vh * 0.6), 1);
+      const vh = window.innerHeight;
+      const y = window.scrollY;
 
-        if (textRef.current) {
-          textRef.current.style.opacity = String(1 - progress);
-        }
-        if (imgRef.current) {
-          imgRef.current.style.transform = `translateY(${y * -0.3}px)`;
-        }
-        ticking = false;
-      });
+      if (imgRef.current) {
+        imgRef.current.style.transform = `translate3d(0,${y * -0.3}px,0)`;
+      }
+      if (textRef.current) {
+        textRef.current.style.transform = `translate3d(0,${y * -0.4}px,0)`;
+        textRef.current.style.opacity = String(Math.max(0, 1 - y / (vh * 0.7)));
+      }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -42,11 +37,16 @@ export default function Hero() {
           priority
         />
       </div>
-      <div className="absolute inset-0 bg-black/30" />
+      {/* Overall tint */}
+      <div className="absolute inset-0 bg-black/25" />
+      {/* Top edge gradient for navbar readability */}
+      <div className="absolute inset-x-0 top-0 h-52 bg-gradient-to-b from-black/70 to-transparent" />
+      {/* Bottom edge gradient */}
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/40 to-transparent" />
 
       <div
         ref={textRef}
-        className="absolute inset-0 flex flex-col items-center justify-center will-change-[opacity]"
+        className="absolute inset-0 flex flex-col items-center justify-center will-change-transform"
       >
         <span className="text-5xl font-semibold tracking-[0.2em] uppercase text-white sm:text-7xl lg:text-8xl">
           Veganlane
