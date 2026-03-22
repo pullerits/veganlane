@@ -8,6 +8,13 @@ import {
 } from "@/lib/recipes";
 import type { CategorySlug } from "@/lib/types";
 
+const bgColors: Record<string, string> = {
+  hommikuks: "bg-jewel-green",
+  "lounaks-ja-ohtuks": "bg-jewel-blue",
+  magustoidud: "bg-jewel-purple",
+  lisandid: "bg-jewel-amber",
+};
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
@@ -32,33 +39,45 @@ export default async function CategoryPage({ params }: Props) {
   if (!category) notFound();
 
   const recipes = getRecipesByCategory(slug as CategorySlug);
+  const bg = bgColors[slug] ?? "bg-jewel-green";
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12">
-      <header className="mb-10">
-        <h1 className="text-3xl font-bold text-foreground sm:text-4xl">
+    <>
+      <section
+        className={`${bg} flex min-h-[50vh] flex-col items-center justify-center px-6 text-center text-white`}
+      >
+        <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-white/50">
+          Kategooria
+        </p>
+        <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
           {category.title}
         </h1>
-        <p className="mt-2 text-lg text-muted">{category.description}</p>
-        <blockquote className="mt-6 border-l-4 border-primary pl-4 italic text-muted">
+        <p className="mt-4 max-w-md text-base leading-relaxed text-white/70">
+          {category.description}
+        </p>
+        <blockquote className="mt-10 max-w-lg text-sm italic leading-relaxed text-white/50">
           &ldquo;{category.quote.text}&rdquo;
-          <span className="mt-1 block text-sm not-italic">
+          <span className="mt-2 block text-[11px] not-italic tracking-[0.1em]">
             — {category.quote.author}
           </span>
         </blockquote>
-      </header>
+      </section>
 
-      {recipes.length > 0 ? (
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {recipes.map((recipe) => (
-            <RecipeCard key={recipe.slug} recipe={recipe} />
-          ))}
+      <section className="px-6 py-24 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          {recipes.length > 0 ? (
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {recipes.map((recipe) => (
+                <RecipeCard key={recipe.slug} recipe={recipe} />
+              ))}
+            </div>
+          ) : (
+            <p className="text-center text-muted">
+              Selles kategoorias pole veel retsepte. Tule varsti tagasi!
+            </p>
+          )}
         </div>
-      ) : (
-        <p className="text-muted">
-          Selles kategoorias pole veel retsepte. Tule varsti tagasi!
-        </p>
-      )}
-    </div>
+      </section>
+    </>
   );
 }

@@ -2,16 +2,20 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="mx-auto flex max-w-3xl flex-col items-center px-4 py-24 text-center">
-      <h1 className="text-6xl font-bold text-primary">404</h1>
-      <p className="mt-4 text-xl text-foreground">Lehekülge ei leitud</p>
-      <p className="mt-2 text-muted">
+    <div className="flex min-h-[70vh] flex-col items-center justify-center px-6 pt-20 text-center">
+      <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-muted">
+        Viga 404
+      </p>
+      <h1 className="mt-4 text-5xl font-semibold tracking-tight text-foreground">
+        Lehekülge ei leitud
+      </h1>
+      <p className="mt-4 max-w-md text-base text-muted">
         Kahjuks ei leidnud me seda lehekülge. Kontrolli aadressi või mine
         tagasi avalehele.
       </p>
       <Link
         href="/"
-        className="mt-8 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-primary-dark"
+        className="mt-10 inline-block rounded-sm bg-primary px-8 py-3.5 text-[12px] font-semibold uppercase tracking-[0.15em] text-white transition-colors duration-200 hover:bg-primary-dark"
       >
         Tagasi avalehele
       </Link>

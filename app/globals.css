@@ -1,13 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafaf7;
+  --background: #fafaf8;
   --foreground: #1a1a1a;
-  --primary: #4a7c59;
-  --primary-light: #e8f0ea;
-  --primary-dark: #3a6347;
-  --accent: #d4a853;
-  --muted: #6b7280;
+  --primary: #2d5a3d;
+  --primary-light: #e9f0eb;
+  --primary-dark: #1e3f2b;
+  --accent: #c4a24e;
+  --muted: #71706e;
+  --cream: #f5f3ef;
+  --sage: #dde5d9;
+  --jewel-green: #2d5a3d;
+  --jewel-blue: #2d4a5a;
+  --jewel-purple: #4a2d5a;
+  --jewel-amber: #5a4a2d;
 }
 
 @theme inline {
@@ -18,6 +24,12 @@
   --color-primary-dark: var(--primary-dark);
   --color-accent: var(--accent);
   --color-muted: var(--muted);
+  --color-cream: var(--cream);
+  --color-sage: var(--sage);
+  --color-jewel-green: var(--jewel-green);
+  --color-jewel-blue: var(--jewel-blue);
+  --color-jewel-purple: var(--jewel-purple);
+  --color-jewel-amber: var(--jewel-amber);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -26,4 +38,10 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Elegant selection color */
+::selection {
+  background: var(--sage);
+  color: var(--foreground);
 }
