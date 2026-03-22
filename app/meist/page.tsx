@@ -44,10 +44,7 @@ export default function AboutPage() {
 
       <section className="bg-cream px-6 py-24 lg:px-10">
         <div className="mx-auto max-w-2xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-muted">
-            Meie väärtused
-          </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground">
+          <h2 className="text-3xl font-semibold tracking-tight text-foreground">
             Milles me usume
           </h2>
           <ul className="mt-10 space-y-8">

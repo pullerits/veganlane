@@ -20,10 +20,7 @@ export default function Home() {
         {/* Categories */}
         <section className="bg-cream px-6 py-24 lg:px-10">
           <div className="mx-auto max-w-7xl">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-muted">
-              Kategooriad
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
               Mida soovid valmistada?
             </h2>
             <div className="mx-auto mt-12 grid max-w-4xl gap-5 sm:grid-cols-2">
@@ -38,10 +35,7 @@ export default function Home() {
         {latestRecipes.length > 0 && (
           <section className="px-6 py-24 lg:px-10">
             <div className="mx-auto max-w-7xl">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-muted">
-                Viimased
-              </p>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+              <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                 Uued retseptid
               </h2>
               <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

@@ -46,10 +46,7 @@ export default async function CategoryPage({ params }: Props) {
       <section
         className={`${bg} flex min-h-[50vh] flex-col items-center justify-center px-6 text-center text-white`}
       >
-        <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-white/50">
-          Kategooria
-        </p>
-        <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+        <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
           {category.title}
         </h1>
         <p className="mt-4 max-w-md text-base leading-relaxed text-white/70">
