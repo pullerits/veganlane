@@ -1,0 +1,252 @@
+[
+  {
+    "slug": "marjane-smuutikauss",
+    "title": "Marjane smuutikauss",
+    "titleEn": "Berry Smoothie Bowl",
+    "category": "breakfast",
+    "servings": 2,
+    "prepTime": "15 min",
+    "difficulty": "easy",
+    "ingredients": [
+      "100g raw buckwheat",
+      "120g frozen banana (approx. 1 medium banana)",
+      "100g fresh or frozen blackcurrants",
+      "40g chia seeds",
+      "4 dates",
+      "Water as needed",
+      "Assorted fresh fruits, berries, seeds, and nuts for topping"
+    ],
+    "instructions": [
+      "Rinse buckwheat and soak overnight in water.",
+      "Slice banana and freeze (or use a regular banana if unprepared).",
+      "In the morning, rinse buckwheat through a strainer until clean.",
+      "Blend buckwheat, frozen banana, blackcurrants, and chia seeds until thick.",
+      "Add water gradually to reach desired consistency.",
+      "Pour thick smoothie into bowls.",
+      "Top with sliced fresh fruits, berries, chopped nuts, and coconut flakes."
+    ],
+    "notes": "You can soak a larger batch of buckwheat at once and refrigerate it — it keeps for several days for convenient mornings.",
+    "description": "Alusta hommikut õigel lainel, siis on terve päev hea hoog sees! See rikkalik kauss annab sulle vajaliku koguse vitamiine, süsivesikuid, rasvu ja valke.",
+    "descriptionEn": "Start your morning on the right wavelength, and you'll have good momentum throughout the day. This nutrient-dense bowl provides you with the necessary vitamins, carbohydrates, fats, and proteins."
+  },
+  {
+    "slug": "suitsulohe",
+    "title": "Suitsulohe",
+    "titleEn": "Smoked Carrot Lox",
+    "category": "breakfast",
+    "servings": null,
+    "yield": "0.5 kg",
+    "prepTime": "90 min + 24h marinating",
+    "difficulty": "medium",
+    "ingredients": [
+      "5 dl coarse salt",
+      "3 large carrots",
+      "2 tbsp olive oil",
+      "3–4 tsp liquid smoke",
+      "4 tsp apple cider vinegar",
+      "0.5 nori sheet"
+    ],
+    "instructions": [
+      "Peel carrots and bury them in salt in a small baking dish. Bake at 180°C for 1.5 hours.",
+      "Remove from oven, brush away salt with a pastry brush, and let cool on paper towels.",
+      "Combine marinade ingredients (olive oil, liquid smoke, vinegar). Cut nori into small strips.",
+      "Slice carrots thinly using a cheese knife, peeler, or mandoline.",
+      "Layer carrot slices in a container, brushing each layer with marinade and sprinkling nori pieces between layers.",
+      "Let marinate for 24 hours.",
+      "When serving on sandwiches, season with lemon juice and fresh dill."
+    ],
+    "notes": "Adjust baking time by 10 minutes based on carrot size. Choose medium-sized carrots for best results. Alternatively, mix sliced carrots gently with marinade in a bowl instead of layering.",
+    "description": "Kui ahjuporgandit õigesti maitsestada, on tulemuseks suitsulõhe analoog ehk suitsulohe. See sobib hästi võileivale, sushi sisse, salatitesse ja bowlide lisandiks.",
+    "descriptionEn": "When roasted carrots are properly seasoned, the result is a smoked salmon substitute. It works well on sandwiches, in sushi, salads, and as a bowl topping."
+  },
+  {
+    "slug": "pannkoogid",
+    "title": "Pannkoogid",
+    "titleEn": "Vegan Pancakes",
+    "category": "breakfast",
+    "servings": 4,
+    "prepTime": "30 min",
+    "difficulty": "medium",
+    "ingredients": [
+      "70g banana",
+      "30g almond flour",
+      "30g potato starch",
+      "30g corn flour",
+      "40g wheat flour",
+      "150g unsweetened plant-based yogurt",
+      "1 tsp vanilla sugar or 0.5 tsp vanilla paste",
+      "1 tsp baking soda",
+      "1 tsp baking powder",
+      "1 tsp chia seeds",
+      "1 tsp apple cider vinegar",
+      "1 tsp psyllium husk or ground flaxseeds",
+      "100g soy milk",
+      "Pinch of salt",
+      "Coconut oil for frying"
+    ],
+    "instructions": [
+      "Mix yogurt with baking soda, baking powder, vinegar, psyllium, and chia seeds; let sit briefly.",
+      "Mash banana into a puree.",
+      "Combine almond flour, wheat flour, corn flour, and starch in a bowl.",
+      "Add banana, soy milk, and yogurt mixture; blend thoroughly.",
+      "Heat coconut oil in a pan; pour 4–5 portions with spacing between them.",
+      "When edges bubble, flip gently with a spatula.",
+      "Serve with preferred toppings."
+    ],
+    "notes": "Best results when you let the batter rest 30 minutes in the fridge. Batter should be thick to prevent spreading; adjust with flour or soy milk as needed.",
+    "description": "Keda jätaksid ükskõikseks pannkoogid!? Varusta end erinevate lisanditega, sest need koogid on liiga maitsvad selleks, et midagi järgi jääks.",
+    "descriptionEn": "Who could resist pancakes? Prepare various toppings, because these cakes are too delicious to leave anything behind."
+  },
+  {
+    "slug": "sokolaadine-smuutikauss",
+    "title": "Šokolaadine smuutikauss",
+    "titleEn": "Chocolate Smoothie Bowl",
+    "category": "breakfast",
+    "servings": 2,
+    "prepTime": "10 min",
+    "difficulty": "easy",
+    "ingredients": [
+      "150g banana",
+      "50g cashews",
+      "2 tbsp chia seeds",
+      "2 tbsp raw cacao powder",
+      "0.5 tsp cinnamon",
+      "Plant-based milk as needed",
+      "Various fruits, berries, nuts, and seeds for topping"
+    ],
+    "instructions": [
+      "Blend all base ingredients together until uniform.",
+      "Adjust consistency by gradually adding milk as needed.",
+      "Pour mixture into a bowl.",
+      "Top with preferred fruits, crushed nuts, and seeds."
+    ],
+    "notes": "Soak cashews in water overnight for a creamier texture. Choose raw cacao over regular cocoa to preserve vitamins and minerals.",
+    "description": "Enam paremaks minna ei saa! Kõik head ja kasulikud asjad üheskoos annavad Sinu hommikule särtsaka alguse.",
+    "descriptionEn": "Nothing could be better! All the good and beneficial ingredients together give your morning a sparkling start."
+  },
+  {
+    "slug": "vurtsikas-kilutaim-ehk-vurtsigilu",
+    "title": "Vürtsikas kilutaim",
+    "titleEn": "Spiced Eggplant Pickle",
+    "category": "breakfast",
+    "servings": null,
+    "yield": "300g",
+    "prepTime": "45 min",
+    "difficulty": "medium",
+    "ingredients": [
+      "2 small eggplants",
+      "0.5 package spice seasoning",
+      "Olive oil",
+      "Sea salt",
+      "Bay leaf (preferably fresh)"
+    ],
+    "instructions": [
+      "Use a mandoline to cut eggplants into 2–3mm thick slices. Stack them and boil in a pot with a lid for ~10 minutes until slightly translucent.",
+      "Strain through a colander and rinse thoroughly with cold water. Keep slices stacked to prevent separation.",
+      "Once cooled, cut slices into quarters. Layer in a container with olive oil, sea salt, spice mixture, and bay leaf between each layer.",
+      "Ensure slices are not too wet; press gently or pat with paper towels if needed.",
+      "Ready after several hours. Serve on dark bread with green onions."
+    ],
+    "notes": "For large eggplants, remove the seeded center after cooking. Without a mandoline, carefully cut 2mm slices with a sharp knife.",
+    "description": "Kaval asendus klassikalisele vürtsikilule. Parim musta leiva ja rohelise sibulaga!",
+    "descriptionEn": "A clever substitute for classic spiced kiluvõi. Best served with dark bread and green onions!"
+  },
+  {
+    "slug": "banaanilootsikud",
+    "title": "Banaanilootsikud",
+    "titleEn": "Banana Boats",
+    "category": "breakfast",
+    "servings": 2,
+    "prepTime": "10 min",
+    "difficulty": "easy",
+    "ingredients": [
+      "2 bananas",
+      "4 tsp peanut butter",
+      "4 tsp mixed chopped nuts",
+      "Fresh fruit and berries to taste",
+      "Fresh peppermint or lemon balm (optional)"
+    ],
+    "instructions": [
+      "Slice bananas lengthwise into halves.",
+      "Place banana halves on two plates.",
+      "Spread one teaspoon of peanut butter on each banana half.",
+      "Top with chopped nuts.",
+      "Add fresh berries and fruit as desired.",
+      "Garnish with fresh peppermint for added flavor."
+    ],
+    "notes": "Works as breakfast, lunch, or a quick snack. For children, create fun shapes or faces with ingredients.",
+    "description": "Kiire ja tervislik hommikueine või vahepala. Banaanilootsikud on lihtne viis nautida maitsvat ja toitvat suupistet.",
+    "descriptionEn": "A quick and healthy breakfast or snack. Banana boats are a simple way to enjoy a tasty and nourishing bite."
+  },
+  {
+    "slug": "tofupirukad-ja-seenepirukad",
+    "title": "Tofupirukad ja seenepirukad",
+    "titleEn": "Tofu and Mushroom Puff Pastry Pies",
+    "category": "breakfast",
+    "servings": 16,
+    "prepTime": "60 min",
+    "difficulty": "medium",
+    "ingredients": [
+      "500g puff pastry",
+      "170g vegan mince",
+      "80g smoked tofu",
+      "1 medium onion",
+      "Meat flavoring",
+      "Salt and pepper",
+      "170g mushrooms",
+      "80g soft tofu",
+      "1 green onion",
+      "1 tbsp vegan mayonnaise",
+      "0.25 tsp turmeric",
+      "0.5 tsp black salt",
+      "Plant-based milk for brushing (optional)"
+    ],
+    "instructions": [
+      "Thaw puff pastry 2 hours prior or use fresh.",
+      "For tofu filling: finely chop onion and grate smoked tofu. Fry vegan mince in olive oil, add onion. Once mince thaws, add grated tofu and seasonings.",
+      "For mushroom filling: sauté mushrooms in olive oil with onion. Combine soft tofu, mayo, and seasonings, then add mushrooms.",
+      "Roll one pastry sheet to double size, cut into four squares. Place a generous spoonful of filling on each, fold diagonally. Press edges with a fork and transfer to baking sheet.",
+      "Optionally brush with plant milk.",
+      "Bake at 190–220°C for approximately 15 minutes until golden brown."
+    ],
+    "notes": "Works with any puff pastry. Firm tofu works if soft tofu is unavailable.",
+    "description": "Lehtaignast saad kiirelt valmistada igasugu pirukaid ja saiakesi. Need siin on soolased tofupirukad, mis meenutavad klassikalisi lihapirukaid.",
+    "descriptionEn": "Puff pastry allows for quick preparation of various pastries. These are savory tofu pastries that resemble traditional meat pastries. You can also fill them with mushrooms instead."
+  },
+  {
+    "slug": "kikerherneomlett",
+    "title": "Kikerherneomlett",
+    "titleEn": "Chickpea Omelette",
+    "category": "breakfast",
+    "servings": 2,
+    "prepTime": "30 min",
+    "difficulty": "medium",
+    "ingredients": [
+      "90g chickpea flour",
+      "130g soy milk",
+      "1 tsp apple cider vinegar",
+      "1 tsp nutritional yeast",
+      "0.125 tsp baking soda",
+      "0.5 tsp Himalayan black salt",
+      "Turmeric to taste",
+      "Garlic powder to taste",
+      "Oil for cooking",
+      "1 onion",
+      "Handful of cherry tomatoes",
+      "Handful of mushrooms",
+      "0.5 bell pepper",
+      "Fresh herbs for serving"
+    ],
+    "instructions": [
+      "Mix dry ingredients with seasonings, then add soy milk and vinegar. Stir until smooth and let rest while preparing filling.",
+      "Chop vegetables and lightly sauté in oil in a pan. Distribute evenly across the pan.",
+      "Pour batter over vegetables. Cover with lid and reduce heat. Let cook for several minutes.",
+      "Check if bottom is golden brown using a spatula. Cut omelette into smaller pieces and flip portions.",
+      "Add oil and heat, cooking a few more minutes. Avoid overcooking.",
+      "Garnish with fresh herbs and serve."
+    ],
+    "notes": "Experiment with different vegetables. Optional: bake in oven at 200°C for ~15 minutes after sautéing filling. If omelette falls apart, reduce filling amount.",
+    "description": "Lihtne kuid mitmekesine kerge hommikueine, mis peaks sobima ka kõige isutumasse hommikusse. Meeldib eriti lastele!",
+    "descriptionEn": "A straightforward yet versatile light breakfast that should appeal even on the pickiest mornings. This recipe is particularly popular with children."
+  }
+]

@@ -46,7 +46,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
         !onHero
-          ? "border-b border-foreground/5 bg-white/90 backdrop-blur-md"
+          ? "bg-white/90 backdrop-blur-md"
           : "bg-transparent"
       }`}
     >

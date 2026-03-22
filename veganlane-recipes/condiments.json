@@ -1,0 +1,124 @@
+[
+  {
+    "slug": "kreemine-pastakaste-ehk-mac-and-cheesei-veganvend",
+    "title": "Kreemine pastakaste",
+    "titleEn": "Creamy Vegan Mac and Cheese Sauce",
+    "category": "condiments",
+    "servings": 4,
+    "prepTime": "40 min",
+    "difficulty": "easy",
+    "ingredients": [
+      "200g potatoes",
+      "100g carrots",
+      "20g nutritional yeast",
+      "80g cold water",
+      "1 tsp salt",
+      "50g neutral oil",
+      "0.7 tsp apple cider vinegar"
+    ],
+    "instructions": [
+      "Cut potatoes and carrots into approximately 2cm pieces and bring to a boil. Simmer covered on low heat for about 15 minutes until tender.",
+      "Drain water completely and transfer cooked vegetables to a blender.",
+      "Add all remaining ingredients and blend until smooth and creamy.",
+      "Taste and adjust seasonings as needed.",
+      "Use hot as a pasta sauce, lasagna topping, or casserole cover. When cooled, works well as a dip."
+    ],
+    "notes": "Keeps in the refrigerator for 4–5 days. Use only neutral-flavored oil. Starchy potatoes yield best results.",
+    "description": "Kreemine kaste sobib ideaalselt pastale aga tegelikult kuhu iganes. Jahtunult naudi seda tipina koos tortilla krõpsudega.",
+    "descriptionEn": "This creamy sauce pairs perfectly with pasta but works wonderfully anywhere. When chilled, enjoy it as a dip alongside tortilla chips."
+  },
+  {
+    "slug": "magushapu-tomatikaste",
+    "title": "Magushapu tomatikaste",
+    "titleEn": "Sweet and Spicy Tomato Sauce",
+    "category": "condiments",
+    "servings": 4,
+    "prepTime": "20 min",
+    "difficulty": "easy",
+    "ingredients": [
+      "Tomato paste",
+      "Fresh ginger",
+      "1 onion",
+      "2 garlic cloves",
+      "1 chili",
+      "Rice vinegar",
+      "Cornstarch",
+      "Sesame oil",
+      "Water",
+      "Sugar",
+      "Salt"
+    ],
+    "instructions": [
+      "Finely mince the onion, garlic, ginger, and chili into a near-paste consistency.",
+      "Lightly sauté the mixture in sesame oil over low heat; add water if needed.",
+      "Add sugar to the pan and allow it to caramelize slightly.",
+      "Stir in tomato paste and rice vinegar, along with salt.",
+      "Mix cornstarch with cold water, then pour into the pan while stirring. Allow to thicken.",
+      "Taste and adjust seasoning with salt, sugar, vinegar, or chili powder."
+    ],
+    "notes": "Balance all four flavors: sweet, salty, sour, and spicy. The sauce stores well in the refrigerator.",
+    "description": "Selle kastme kasutusviisid on lõputud. Sobib nii nuudlitele kui riisile, kotlettidele, nagitsatele jne.",
+    "descriptionEn": "This sauce has endless uses. Works with noodles, rice, cutlets, fritters, and so much more."
+  },
+  {
+    "slug": "avokaado-jogurtikaste",
+    "title": "Avokaado-jogurti salatikaste",
+    "titleEn": "Avocado Yogurt Sauce",
+    "category": "condiments",
+    "servings": 2,
+    "prepTime": "15 min",
+    "difficulty": "easy",
+    "ingredients": [
+      "1 medium avocado",
+      "100ml unsweetened plant-based yogurt",
+      "1 small garlic clove",
+      "1 tbsp soy milk",
+      "0.5 lemon, juiced",
+      "1 tbsp olive oil",
+      "1 tsp nutritional yeast",
+      "Handful fresh basil",
+      "Black pepper",
+      "Salt"
+    ],
+    "instructions": [
+      "Combine all ingredients in a blender or food processor.",
+      "Adjust sauce consistency with soy milk as needed.",
+      "Season with salt and pepper to taste."
+    ],
+    "notes": "Store in an airtight container in the refrigerator. Avocado oxidizes when exposed to oxygen so the sauce may develop a grayish tone but remains edible for a couple of days. Pairs well with salads, omelettes, tortilla fillings, or as a dip.",
+    "description": "Mõnusalt värske ja kreemine kaste sobib enamuse salatite kõrvale aga ka näiteks omleti juurde.",
+    "descriptionEn": "A pleasantly fresh and creamy sauce that works alongside most salads, omelets, tortilla fillings, or as a veggie dip."
+  },
+  {
+    "slug": "tervise-tahiini",
+    "title": "Tervise-tahiini",
+    "titleEn": "Health Tahini",
+    "category": "condiments",
+    "servings": null,
+    "yield": "450g",
+    "prepTime": "25 min",
+    "difficulty": "easy",
+    "ingredients": [
+      "150g sesame seeds",
+      "150g sunflower seeds",
+      "100g ground flaxseeds",
+      "1 tbsp olive oil",
+      "1 tbsp sea buckthorn oil",
+      "1 tbsp hemp oil",
+      "1 tbsp walnut oil",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Lightly roast sunflower seeds in a dry pan, then add sesame seeds.",
+      "Toast continuously, stirring constantly, until sesame seeds turn light golden — avoid browning.",
+      "Allow seeds to cool completely.",
+      "Transfer cooled seeds to a tall, narrow bowl suitable for food processing.",
+      "Add all oils and salt.",
+      "Use a food processor to blend mixture into a uniform paste, working at moderate speed to prevent overheating.",
+      "Add additional oil if needed for consistency."
+    ],
+    "notes": "A food processor works better than a blender. Adapt oils based on availability — the result maintains omega-3 fatty acids, selenium, iron, zinc, potassium, and calcium.",
+    "description": "Klassikaline tahiini koosneb seesamiseemnetest ja õlist. See tahiini on märksa võimsam! Siia on lisaks seesamiseemnetele peidetud veel päevalille- ja linaseemned ning mitmed tervislikud õlid.",
+    "descriptionEn": "Classic tahini is made from sesame seeds and oil. This version is considerably more potent — packed with sunflower and flax seeds plus several healthful oils."
+  }
+]
