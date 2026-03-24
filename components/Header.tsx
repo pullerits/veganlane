@@ -17,19 +17,25 @@ export default function Header() {
   const hasHero = pathname === "/";
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [logoVisible, setLogoVisible] = useState(!hasHero);
+  const [heroLogoVisible, setHeroLogoVisible] = useState(false);
 
   useEffect(() => {
-    setLogoVisible(!hasHero);
-
     const onScroll = () => {
-      setScrolled(window.scrollY > 10);
+      setScrolled((prev) => {
+        const next = window.scrollY > 10;
+        return prev === next ? prev : next;
+      });
       if (hasHero) {
-        setLogoVisible(window.scrollY > window.innerHeight * 0.4);
+        setHeroLogoVisible((prev) => {
+          const next = window.scrollY > window.innerHeight * 0.4;
+          return prev === next ? prev : next;
+        });
       }
     };
+
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
+
     return () => window.removeEventListener("scroll", onScroll);
   }, [hasHero]);
 
@@ -41,6 +47,7 @@ export default function Header() {
   }, [menuOpen]);
 
   const onHero = hasHero && !scrolled;
+  const logoVisible = !hasHero || heroLogoVisible;
 
   return (
     <>

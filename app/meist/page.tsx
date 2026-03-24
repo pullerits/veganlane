@@ -3,20 +3,18 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Meist",
-  description: "Veganlane lugu — kes me oleme ja miks usume taimsesse toitu.",
+  description: "Veganlane lugu - kes me oleme ja miks usume taimsesse toitu.",
 };
 
 const questions = [
   "Oled toiduvalmistamises veel algaja, aga tahad teha maitsvat ja kodust toitu nagu ema tegi?",
   "Oled loobunud loomsetest toiduainetest ja nuputad endamisi mida millega asendada?",
-  "Oled tüdinud oma tavapärasest menüüst ja mõtled: „Mida teised küll söövad"?",
+  "Oled tüdinenud oma tavapärasest menüüst ja mõtled: mida teised küll söövad?",
 ];
 
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-5xl px-6 pb-28 pt-16 lg:px-10">
-
-      {/* Label + Title */}
       <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-muted">
         Meist
       </p>
@@ -26,22 +24,23 @@ export default function AboutPage() {
 
       <div className="mt-12 border-t border-foreground/8" />
 
-      {/* Intro */}
       <div className="mt-12 max-w-2xl space-y-5 text-base leading-relaxed text-muted">
         <p>
           Veganlane on alguse saanud soovist jagada perekeskselt klassikalisi
           retsepte, mida kõik armastavad ja on harjunud sööma.
         </p>
         <p>
-          Mitmed klassikalised retseptid on läbinud „veganiseerimise" ning
-          leidnud tunnustust uute klassikutena.
+          Mitmed klassikalised retseptid on läbinud
+          {" "}
+          <span>&quot;veganiseerimise&quot;</span>
+          {" "}
+          ning leidnud tunnustust uute klassikutena.
         </p>
         <p className="font-medium text-foreground">
           Retseptid, mis siit leiad, on kõik taimsest toorainest.
         </p>
       </div>
 
-      {/* Three questions */}
       <div className="mt-16">
         <p className="mb-8 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
           See leht on sulle, kui...
@@ -59,7 +58,6 @@ export default function AboutPage() {
         <div className="border-t border-foreground/8" />
       </div>
 
-      {/* Main description */}
       <div className="mt-16 max-w-2xl text-base leading-relaxed text-muted">
         <p>
           Siin on sulle põhjalike juhenditega ehk puust ja punaseks retseptid
@@ -69,7 +67,6 @@ export default function AboutPage() {
         </p>
       </div>
 
-      {/* Images */}
       <div className="mt-16 grid gap-4 sm:grid-cols-2">
         <div className="relative aspect-[4/3] overflow-hidden rounded-sm bg-cream">
           <Image
@@ -91,7 +88,6 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* CTA */}
       <div className="mt-16 rounded-sm bg-cream px-10 py-10">
         <p className="text-lg font-medium leading-relaxed text-foreground">
           Valmista maitsvat ja tervislikku toitu ise ja jaga retsepte oma
@@ -110,7 +106,6 @@ export default function AboutPage() {
           .
         </p>
       </div>
-
     </div>
   );
 }
