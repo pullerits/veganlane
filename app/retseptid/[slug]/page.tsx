@@ -107,7 +107,20 @@ export default async function RecipePage({ params }: Props) {
             <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-muted">
               Raskusaste
             </span>
-            <span className="mt-1 block text-sm font-medium">
+            <div className="mt-2 flex gap-1">
+              {[1, 2, 3].map((n) => {
+                const level = { KERGE: 1, KESKMINE: 2, KEERUKAM: 3 }[recipe.raskusaste] ?? 1;
+                return (
+                  <span
+                    key={n}
+                    className={`h-1.5 w-7 rounded-full transition-colors ${
+                      n <= level ? "bg-primary" : "bg-foreground/10"
+                    }`}
+                  />
+                );
+              })}
+            </div>
+            <span className="mt-1.5 block text-sm font-medium">
               {recipe.raskusaste.charAt(0) +
                 recipe.raskusaste.slice(1).toLowerCase()}
             </span>
