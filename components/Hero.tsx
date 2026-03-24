@@ -7,11 +7,15 @@ import { motion, useScroll, useTransform } from "framer-motion";
 export default function Hero() {
   const [viewportHeight, setViewportHeight] = useState(0);
   const { scrollY } = useScroll();
-  const imageY = useTransform(scrollY, (value) => value * -0.3);
-  const textY = useTransform(scrollY, (value) => value * -0.4);
-  const textOpacity = useTransform(scrollY, (value) =>
-    viewportHeight > 0 ? Math.max(0, 1 - value / (viewportHeight * 0.7)) : 1
-  );
+  const imageY = useTransform(scrollY, (value) => Math.max(value, 0) * -0.3);
+  const textY = useTransform(scrollY, (value) => Math.max(value, 0) * -0.4);
+  const textOpacity = useTransform(scrollY, (value) => {
+    const clampedValue = Math.max(value, 0);
+
+    return viewportHeight > 0
+      ? Math.max(0, 1 - clampedValue / (viewportHeight * 0.7))
+      : 1;
+  });
 
   useEffect(() => {
     const updateViewportHeight = () => setViewportHeight(window.innerHeight);

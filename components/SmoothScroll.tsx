@@ -5,7 +5,12 @@ import Lenis from "lenis";
 
 export default function SmoothScroll() {
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
+
+    if (prefersReducedMotion || isTouchDevice) {
       return;
     }
 
