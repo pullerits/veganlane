@@ -9,103 +9,119 @@ export const metadata: Metadata = {
 const questions = [
   "Oled toiduvalmistamises veel algaja, aga tahad teha maitsvat ja kodust toitu nagu ema tegi?",
   "Oled loobunud loomsetest toiduainetest ja nuputad endamisi mida millega asendada?",
-  "Oled tüdinenud oma tavapärasest menüüst ja mõtled: mida teised küll söövad?",
+  "Oled tüdinud oma tavapärasest menüüst ja mõtled: mida teised küll söövad?",
 ];
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-5xl px-6 pb-28 pt-16 lg:px-10">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-muted">
-        Meist
-      </p>
-      <h1 className="mt-4 max-w-2xl text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
-        Veganlase lugu
-      </h1>
-
-      <div className="mt-12 border-t border-foreground/8" />
-
-      <div className="mt-12 max-w-2xl space-y-5 text-base leading-relaxed text-muted">
-        <p>
-          Veganlane on alguse saanud soovist jagada perekeskselt klassikalisi
-          retsepte, mida kõik armastavad ja on harjunud sööma.
-        </p>
-        <p>
-          Mitmed klassikalised retseptid on läbinud
-          {" "}
-          <span>&quot;veganiseerimise&quot;</span>
-          {" "}
-          ning leidnud tunnustust uute klassikutena.
-        </p>
-        <p className="font-medium text-foreground">
-          Retseptid, mis siit leiad, on kõik taimsest toorainest.
-        </p>
-      </div>
-
-      <div className="mt-16">
-        <p className="mb-8 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
-          See leht on sulle, kui...
-        </p>
-        {questions.map((q, i) => (
-          <div key={i} className="flex gap-8 border-t border-foreground/8 py-8">
-            <span className="shrink-0 pt-0.5 text-[11px] font-semibold tabular-nums text-foreground/20">
-              0{i + 1}
+    <div className="bg-background">
+      {/* ── Hero ── */}
+      <section className="px-6 pt-32 pb-16 lg:px-10 lg:pt-44 lg:pb-20">
+        <div className="mx-auto max-w-5xl">
+          <div className="flex items-center gap-4 mb-10">
+            <div className="h-px w-10 bg-accent" />
+            <span className="text-[11px] tracking-[0.22em] uppercase text-accent">
+              Meie lugu
             </span>
-            <p className="text-lg font-medium leading-snug text-foreground">
-              {q}
-            </p>
           </div>
-        ))}
-        <div className="border-t border-foreground/8" />
-      </div>
 
-      <div className="mt-16 max-w-2xl text-base leading-relaxed text-muted">
-        <p>
-          Siin on sulle põhjalike juhenditega ehk puust ja punaseks retseptid
-          lihtsatele ja klassikalistele toitudele. Retseptid on täiendatud
-          kommentaaride ja nippidega ning mõnikord ka soovitustega tooraine
-          osas.
-        </p>
-      </div>
+          <div className="grid lg:grid-cols-[1fr_0.55fr] lg:gap-16 lg:items-end">
+            <div>
+              <h1 className="text-[3.25rem] font-semibold tracking-tight text-foreground leading-[0.97] sm:text-7xl lg:text-[6rem]">
+                Veganlase
+                <br />
+                lugu
+              </h1>
+              <div className="mt-10 max-w-lg space-y-5 text-base leading-8 text-muted sm:text-lg">
+                <p>
+                  Veganlane on alguse saanud soovist jagada perekeskselt
+                  klassikalisi retsepte, mida kõik armastavad ja on harjunud
+                  sööma.
+                </p>
+                <p>
+                  Mitmed klassikalised retseptid on läbinud veganiseerimise ning
+                  leidnud tunnustust uute klassikutena.
+                </p>
+                <p className="font-medium text-foreground">
+                  Retseptid, mis siit leiad, on kõik taimsest toorainest.
+                </p>
+              </div>
+            </div>
 
-      <div className="mt-16 grid gap-4 sm:grid-cols-2">
+            <div className="hidden lg:block">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-sm bg-cream shadow-[0_20px_60px_rgba(26,26,26,0.10)]">
+                <Image
+                  src="/images/meist1.jpg"
+                  alt="Veganlane"
+                  fill
+                  className="object-cover"
+                  sizes="22rem"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Mobile image ── */}
+      <section className="lg:hidden px-6">
         <div className="relative aspect-[4/3] overflow-hidden rounded-sm bg-cream">
           <Image
-            src="/images/hero.jpg"
-            alt="Köögiviljad paberikotis"
+            src="/images/meist1.jpg"
+            alt="Veganlane"
             fill
             className="object-cover"
-            sizes="(min-width: 640px) 50vw, 100vw"
+            sizes="100vw"
           />
         </div>
-        <div className="relative aspect-[4/3] overflow-hidden rounded-sm bg-cream">
-          <Image
-            src="/images/lõuna-hero.webp"
-            alt="Vegan poke bowl marineeritud tofuga"
-            fill
-            className="object-cover"
-            sizes="(min-width: 640px) 50vw, 100vw"
-          />
-        </div>
-      </div>
+      </section>
 
-      <div className="mt-16 rounded-sm bg-cream px-10 py-10">
-        <p className="text-lg font-medium leading-relaxed text-foreground">
-          Valmista maitsvat ja tervislikku toitu ise ja jaga retsepte oma
-          lähedastega.
-        </p>
-        <p className="mt-3 text-sm leading-relaxed text-muted">
-          Kui midagi hästi välja tuleb, jaga seda pildi või kommentaari abil{" "}
-          <a
-            href="https://www.facebook.com/veganlane"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-medium text-primary underline-offset-4 hover:underline"
-          >
-            Veganlase Facebooki lehel
-          </a>
-          .
-        </p>
-      </div>
+      {/* ── Questions ── */}
+      <section className="bg-cream px-6 py-24 lg:px-10 lg:py-32 mt-16 lg:mt-20">
+        <div className="mx-auto max-w-5xl">
+          <p className="text-[11px] tracking-[0.22em] uppercase text-accent mb-14">
+            Kas see oled sina?
+          </p>
+          <div className="divide-y divide-foreground/10">
+            {questions.map((question, i) => (
+              <div key={i} className="flex gap-7 py-10 lg:gap-10 lg:py-12">
+                <span className="shrink-0 text-3xl font-semibold tabular-nums leading-none text-foreground/[0.08] mt-0.5 lg:text-4xl">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p className="text-lg font-medium leading-8 text-foreground sm:text-xl sm:leading-9">
+                  {question}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Closing ── */}
+      <section className="px-6 py-24 lg:px-10 lg:py-32">
+        <div className="mx-auto max-w-5xl">
+          <div className="grid gap-12 lg:grid-cols-[0.55fr_1fr] lg:gap-20 lg:items-center">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-cream shadow-[0_20px_60px_rgba(26,26,26,0.08)]">
+              <Image
+                src="/images/meist2.jpg"
+                alt="Veganlane"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 28rem"
+              />
+            </div>
+            <div>
+              <div className="h-px w-10 bg-accent mb-8" />
+              <p className="text-xl leading-9 text-muted sm:text-2xl sm:leading-10">
+                Siin on sulle põhjalike juhenditega ehk puust ja punaseks
+                retseptid lihtsatele ja klassikalistele toitudele. Retseptid on
+                täiendatud kommentaaride ja nippidega ning mõnikord ka
+                soovitustega tooraine osas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
