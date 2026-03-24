@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const categoryLinks = [
@@ -22,11 +23,14 @@ export default function Footer() {
         <div className="grid gap-16 sm:grid-cols-2 lg:grid-cols-[1fr_auto_auto_auto] lg:gap-20">
           {/* Brand + socials */}
           <div>
-            <Link
-              href="/"
-              className="text-xl font-semibold tracking-[0.15em] uppercase text-white"
-            >
-              Veganlane
+            <Link href="/">
+              <Image
+                src="/images/veganlane-logo-white-transparent.png"
+                alt="Veganlane"
+                width={160}
+                height={48}
+                className="h-22 w-auto -ml-2"
+              />
             </Link>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/50">
               Taimsed retseptid igaks päevaks. Tervem. Ilusam. Elavam.

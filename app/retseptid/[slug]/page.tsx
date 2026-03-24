@@ -60,7 +60,7 @@ export default async function RecipePage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <article className="mx-auto max-w-5xl px-6 pb-28 pt-10 lg:px-10">
+      <article className="mx-auto max-w-5xl px-6 pb-28 pt-24 lg:px-10 lg:pt-24">
 
         {/* Back link */}
         {category && (
