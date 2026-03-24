@@ -17,8 +17,8 @@ export const categories: Category[] = [
     description:
       "Toitvad taimsed põhiroad, mis sobivad nii lõuna- kui õhtusöögiks.",
     quote: {
-      text: "Ükski toit pole nii ilus, kui see, mis kasvab maast.",
-      author: "Tundmatu",
+      text: "Söö toitu. Mitte liiga palju. Peamiselt taimi.",
+      author: "Michael Pollan",
     },
   },
   {

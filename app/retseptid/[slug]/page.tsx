@@ -33,6 +33,9 @@ export default async function RecipePage({ params }: Props) {
   if (!recipe) notFound();
 
   const category = getCategoryBySlug(recipe.category);
+  const difficultyLevel = { KERGE: 1, KESKMINE: 2, KEERUKAM: 3 }[recipe.raskusaste] ?? 1;
+  const difficultyLabel =
+    recipe.raskusaste.charAt(0) + recipe.raskusaste.slice(1).toLowerCase();
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -57,20 +60,9 @@ export default async function RecipePage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Hero image */}
-      <div className="relative h-[50vh] w-full bg-cream sm:h-[60vh]">
-        <Image
-          src={recipe.image}
-          alt={recipe.title}
-          fill
-          className="object-cover"
-          sizes="100vw"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-      </div>
+      <article className="mx-auto max-w-5xl px-6 pb-28 pt-10 lg:px-10">
 
-      <article className="mx-auto max-w-4xl px-6 py-16 lg:px-10">
+        {/* Back link */}
         {category && (
           <Link
             href={`/kategooria/${category.slug}`}
@@ -80,55 +72,76 @@ export default async function RecipePage({ params }: Props) {
           </Link>
         )}
 
-        <h1 className="mt-6 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-          {recipe.title}
-        </h1>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted">
-          {recipe.description}
-        </p>
+        {/* Header: title/meta left, image right */}
+        <div className="mt-10 flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
 
-        {/* Metadata bar */}
-        <div className="mt-10 flex flex-wrap gap-10 border-y border-foreground/10 py-6">
-          <div>
-            <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-muted">
-              Kogus
-            </span>
-            <span className="mt-1 block text-sm font-medium">{recipe.kogus}</span>
-          </div>
-          <div>
-            <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-muted">
-              Valmistusaeg
-            </span>
-            <span className="mt-1 block text-sm font-medium">
-              {recipe.valmistusaeg}
-            </span>
-          </div>
-          <div>
-            <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-muted">
-              Raskusaste
-            </span>
-            <div className="mt-2 flex gap-1">
-              {[1, 2, 3].map((n) => {
-                const level = { KERGE: 1, KESKMINE: 2, KEERUKAM: 3 }[recipe.raskusaste] ?? 1;
-                return (
-                  <span
-                    key={n}
-                    className={`h-1.5 w-7 rounded-full transition-colors ${
-                      n <= level ? "bg-primary" : "bg-foreground/10"
-                    }`}
-                  />
-                );
-              })}
+          {/* Left: text content */}
+          <div className="flex min-w-0 flex-1 flex-col">
+            <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-[3.5rem] lg:leading-[1.1]">
+              {recipe.title}
+            </h1>
+            <p className="mt-5 text-base leading-relaxed text-muted">
+              {recipe.description}
+            </p>
+
+            {/* Metadata */}
+            <div className="mt-10 grid grid-cols-3 gap-px overflow-hidden rounded-sm border border-foreground/8 bg-foreground/8">
+              <div className="bg-background px-5 py-5">
+                <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-muted">
+                  Kogus
+                </span>
+                <span className="mt-1.5 block text-sm font-medium text-foreground">
+                  {recipe.kogus}
+                </span>
+              </div>
+              <div className="bg-background px-5 py-5">
+                <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-muted">
+                  Valmistusaeg
+                </span>
+                <span className="mt-1.5 block text-sm font-medium text-foreground">
+                  {recipe.valmistusaeg}
+                </span>
+              </div>
+              <div className="bg-background px-5 py-5">
+                <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-muted">
+                  Raskusaste
+                </span>
+                <div className="mt-2.5 flex gap-1">
+                  {[1, 2, 3].map((n) => (
+                    <span
+                      key={n}
+                      className={`h-1.5 w-7 rounded-full ${
+                        n <= difficultyLevel ? "bg-primary" : "bg-foreground/10"
+                      }`}
+                    />
+                  ))}
+                </div>
+                <span className="mt-1.5 block text-sm font-medium text-foreground">
+                  {difficultyLabel}
+                </span>
+              </div>
             </div>
-            <span className="mt-1.5 block text-sm font-medium">
-              {recipe.raskusaste.charAt(0) +
-                recipe.raskusaste.slice(1).toLowerCase()}
-            </span>
+          </div>
+
+          {/* Right: image */}
+          <div className="relative w-full shrink-0 overflow-hidden rounded-sm bg-cream lg:w-[340px]">
+            <Image
+              src={recipe.image}
+              alt={recipe.title}
+              width={0}
+              height={0}
+              sizes="(min-width: 1024px) 340px, 100vw"
+              className="h-auto w-full"
+              priority
+            />
           </div>
         </div>
 
-        {/* Content: Ingredients + Steps */}
-        <div className="mt-14 grid gap-16 lg:grid-cols-[1fr_2fr]">
+        {/* Divider */}
+        <div className="mt-16 border-t border-foreground/8" />
+
+        {/* Ingredients + Steps */}
+        <div className="mt-14 grid gap-14 lg:grid-cols-[1fr_2fr]">
           <section>
             <h2 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
               Koostisosad
