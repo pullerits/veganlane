@@ -1,82 +1,116 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Meist",
-  description:
-    "Veganlane lugu — kes me oleme ja miks usume taimsesse toitu.",
+  description: "Veganlane lugu — kes me oleme ja miks usume taimsesse toitu.",
 };
+
+const questions = [
+  "Oled toiduvalmistamises veel algaja, aga tahad teha maitsvat ja kodust toitu nagu ema tegi?",
+  "Oled loobunud loomsetest toiduainetest ja nuputad endamisi mida millega asendada?",
+  "Oled tüdinud oma tavapärasest menüüst ja mõtled: „Mida teised küll söövad"?",
+];
 
 export default function AboutPage() {
   return (
-    <>
-      <section className="flex min-h-[50vh] flex-col items-center justify-center bg-jewel-green px-6 text-center text-white">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-white/50">
-          Meie lugu
-        </p>
-        <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-          Veganlane
-        </h1>
-        <p className="mt-4 max-w-md text-base leading-relaxed text-white/70">
-          Taimsed retseptid, mis on loodud armastusega Eesti köögile mõeldes.
-        </p>
-      </section>
+    <div className="mx-auto max-w-5xl px-6 pb-28 pt-16 lg:px-10">
 
-      <section className="px-6 py-24 lg:px-10">
-        <div className="mx-auto max-w-2xl space-y-8 text-base leading-[1.8] text-muted">
-          <p>
-            Veganlane sündis soovist näidata, et taimne toit võib olla lihtne,
-            maitsev ja kättesaadav igaühele. Me usume, et iga taimne eine on
-            samm parema tervise ja puhtama planeedi poole.
-          </p>
-          <p>
-            Meie retseptid on loodud Eesti köögile mõeldes — kasutame kohalikke
-            tooraineid, hooajalisi vilju ja tuttavaid maitseid, andes neile uue,
-            taimse hingamise. Siin ei ole keerulisi tehnikaid ega raskesti
-            leitavaid koostisosi.
-          </p>
-          <p>
-            Olenemata sellest, kas oled kogenud taimetoitlane või alles alustad
-            oma teekonda, loodame, et Veganlane inspireerib sind proovima midagi
-            uut. Sest hea toit ühendab meid kõiki.
-          </p>
-        </div>
-      </section>
+      {/* Label + Title */}
+      <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-muted">
+        Meist
+      </p>
+      <h1 className="mt-4 max-w-2xl text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
+        Veganlase lugu
+      </h1>
 
-      <section className="bg-cream px-6 py-24 lg:px-10">
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-3xl font-semibold tracking-tight text-foreground">
-            Milles me usume
-          </h2>
-          <ul className="mt-10 space-y-8">
-            {[
-              {
-                title: "Lihtsus",
-                desc: "Retseptid, mida igaüks saab valmistada — ilma keeruliste tehnikate ja eksootilist koostisosadeta.",
-              },
-              {
-                title: "Kohalikkus",
-                desc: "Eesti tooraineid eelistades loome retsepte, mis on tuttavad ja kättesaadavad.",
-              },
-              {
-                title: "Jätkusuutlikkus",
-                desc: "Taimne toit kui teadlik valik parema planeedi ja tervise poole.",
-              },
-            ].map((value) => (
-              <li
-                key={value.title}
-                className="border-b border-foreground/5 pb-8"
-              >
-                <h3 className="text-lg font-semibold text-foreground">
-                  {value.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">
-                  {value.desc}
-                </p>
-              </li>
-            ))}
-          </ul>
+      <div className="mt-12 border-t border-foreground/8" />
+
+      {/* Intro */}
+      <div className="mt-12 max-w-2xl space-y-5 text-base leading-relaxed text-muted">
+        <p>
+          Veganlane on alguse saanud soovist jagada perekeskselt klassikalisi
+          retsepte, mida kõik armastavad ja on harjunud sööma.
+        </p>
+        <p>
+          Mitmed klassikalised retseptid on läbinud „veganiseerimise" ning
+          leidnud tunnustust uute klassikutena.
+        </p>
+        <p className="font-medium text-foreground">
+          Retseptid, mis siit leiad, on kõik taimsest toorainest.
+        </p>
+      </div>
+
+      {/* Three questions */}
+      <div className="mt-16">
+        <p className="mb-8 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
+          See leht on sulle, kui...
+        </p>
+        {questions.map((q, i) => (
+          <div key={i} className="flex gap-8 border-t border-foreground/8 py-8">
+            <span className="shrink-0 pt-0.5 text-[11px] font-semibold tabular-nums text-foreground/20">
+              0{i + 1}
+            </span>
+            <p className="text-lg font-medium leading-snug text-foreground">
+              {q}
+            </p>
+          </div>
+        ))}
+        <div className="border-t border-foreground/8" />
+      </div>
+
+      {/* Main description */}
+      <div className="mt-16 max-w-2xl text-base leading-relaxed text-muted">
+        <p>
+          Siin on sulle põhjalike juhenditega ehk puust ja punaseks retseptid
+          lihtsatele ja klassikalistele toitudele. Retseptid on täiendatud
+          kommentaaride ja nippidega ning mõnikord ka soovitustega tooraine
+          osas.
+        </p>
+      </div>
+
+      {/* Images */}
+      <div className="mt-16 grid gap-4 sm:grid-cols-2">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-sm bg-cream">
+          <Image
+            src="/images/hero.jpg"
+            alt="Köögiviljad paberikotis"
+            fill
+            className="object-cover"
+            sizes="(min-width: 640px) 50vw, 100vw"
+          />
         </div>
-      </section>
-    </>
+        <div className="relative aspect-[4/3] overflow-hidden rounded-sm bg-cream">
+          <Image
+            src="/images/lõuna-hero.webp"
+            alt="Vegan poke bowl marineeritud tofuga"
+            fill
+            className="object-cover"
+            sizes="(min-width: 640px) 50vw, 100vw"
+          />
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="mt-16 rounded-sm bg-cream px-10 py-10">
+        <p className="text-lg font-medium leading-relaxed text-foreground">
+          Valmista maitsvat ja tervislikku toitu ise ja jaga retsepte oma
+          lähedastega.
+        </p>
+        <p className="mt-3 text-sm leading-relaxed text-muted">
+          Kui midagi hästi välja tuleb, jaga seda pildi või kommentaari abil{" "}
+          <a
+            href="https://www.facebook.com/veganlane"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-primary underline-offset-4 hover:underline"
+          >
+            Veganlase Facebooki lehel
+          </a>
+          .
+        </p>
+      </div>
+
+    </div>
   );
 }

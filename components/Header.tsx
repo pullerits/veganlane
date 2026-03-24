@@ -57,7 +57,7 @@ export default function Header() {
           <Link
             href="/"
             className="text-sm font-medium uppercase tracking-[0.15em] text-muted transition-colors hover:text-foreground"
-            onClick={() => setMenuOpen(false)}
+            onClick={() => setTimeout(() => setMenuOpen(false), 500)}
           >
             Avaleht
           </Link>
@@ -66,7 +66,7 @@ export default function Header() {
               key={link.href}
               href={link.href}
               className="text-sm font-medium uppercase tracking-[0.15em] text-muted transition-colors hover:text-foreground"
-              onClick={() => setMenuOpen(false)}
+              onClick={() => setTimeout(() => setMenuOpen(false), 500)}
             >
               {link.label}
             </Link>
@@ -83,7 +83,7 @@ export default function Header() {
               : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:py-5 lg:px-10">
           {/* Left nav links (desktop) */}
           <nav
             className="hidden flex-1 items-center gap-8 lg:flex"

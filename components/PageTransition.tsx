@@ -57,7 +57,6 @@ export default function PageTransition({
         return;
 
       e.preventDefault();
-      e.stopPropagation();
 
       isTransitioning.current = true;
       pendingHref.current = href;
