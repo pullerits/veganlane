@@ -16,7 +16,7 @@ export const recipes: Recipe[] = [
   },
   {
     slug: "suitsulohe",
-    title: "Suitsulohe",
+    title: "Suitsulõhe",
     description: "Kui ahjuporgandit õigesti maitsestada, on tulemuseks suitsulõhe analoog ehk suitsulohe. See sobib hästi võileivale, sushi sisse, salatitesse ja bowlide lisandiks.",
     category: "hommikuks",
     image: "/images/recipes/suitsulohe.jpg",

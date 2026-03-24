@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Image from "next/image";
 import RecipeCard from "@/components/RecipeCard";
 import {
   getAllCategories,
@@ -8,11 +9,11 @@ import {
 } from "@/lib/recipes";
 import type { CategorySlug } from "@/lib/types";
 
-const bgColors: Record<string, string> = {
-  hommikuks: "bg-jewel-green",
-  "lounaks-ja-ohtuks": "bg-jewel-blue",
-  magustoidud: "bg-jewel-purple",
-  lisandid: "bg-jewel-amber",
+const heroImages: Record<string, string> = {
+  hommikuks: "/images/hommikusöök-hero.jpg",
+  "lounaks-ja-ohtuks": "/images/lõuna-hero.webp",
+  magustoidud: "/images/dessert-hero.jpg",
+  lisandid: "/images/lisandid-hero.jpg",
 };
 
 interface Props {
@@ -39,20 +40,33 @@ export default async function CategoryPage({ params }: Props) {
   if (!category) notFound();
 
   const recipes = getRecipesByCategory(slug as CategorySlug);
-  const bg = bgColors[slug] ?? "bg-jewel-green";
+  const heroImage = heroImages[slug];
 
   return (
     <>
       <section
-        className={`${bg} relative flex min-h-[50vh] flex-col items-center justify-center px-6 text-center text-white`}
+        className="relative flex min-h-[50vh] flex-col items-center justify-center px-6 text-center text-white"
       >
-        <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+        {heroImage && (
+          <>
+            <Image
+              src={heroImage}
+              alt={category.title}
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority
+            />
+            <div className="absolute inset-0 bg-black/40" />
+          </>
+        )}
+        <h1 className="relative z-10 text-4xl font-semibold tracking-tight sm:text-5xl">
           {category.title}
         </h1>
-        <p className="mt-4 max-w-md text-base leading-relaxed text-white/70">
+        <p className="relative z-10 mt-4 max-w-md text-base leading-relaxed text-white/70">
           {category.description}
         </p>
-        <blockquote className="absolute bottom-8 max-w-lg text-sm italic leading-relaxed text-white/50">
+        <blockquote className="absolute bottom-8 z-10 max-w-lg text-sm italic leading-relaxed text-white/50">
           &ldquo;{category.quote.text}&rdquo;
           <span className="mt-2 block text-[11px] not-italic tracking-[0.1em]">
             — {category.quote.author}

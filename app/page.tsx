@@ -19,11 +19,11 @@ export default function Home() {
       <div className="relative z-10 bg-background">
         {/* Categories */}
         <section className="bg-cream px-6 py-24 lg:px-10">
-          <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-4xl">
             <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
               Mida soovid valmistada?
             </h2>
-            <div className="mx-auto mt-12 grid max-w-4xl gap-5 sm:grid-cols-2">
+            <div className="mt-12 grid gap-5 sm:grid-cols-2">
               {categories.map((cat, i) => (
                 <CategoryCard key={cat.slug} category={cat} index={i} />
               ))}
