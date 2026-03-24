@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -61,6 +62,13 @@ export default function Header() {
           className="flex h-full flex-col items-center justify-center gap-8"
           aria-label="Mobiilne navigatsioon"
         >
+          <Image
+            src="/images/veganlane-logo-black-transparent.png"
+            alt="Veganlane"
+            width={160}
+            height={48}
+            className="mb-4 h-7 w-auto"
+          />
           <Link
             href="/"
             className="text-sm font-medium uppercase tracking-[0.15em] text-muted transition-colors hover:text-foreground"
@@ -90,7 +98,7 @@ export default function Header() {
               : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:py-5 lg:px-10">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-1.5 lg:py-2.5 lg:px-10">
           {/* Left nav links (desktop) */}
           <nav
             className="hidden flex-1 items-center gap-8 lg:flex"
@@ -120,7 +128,16 @@ export default function Header() {
                 : "pointer-events-none -translate-y-2 opacity-0"
             }`}
           >
-            <span
+            {/* Logo image — comment out below and uncomment the span to revert to text */}
+            <Image
+              src="/images/veganlane-logo-black-transparent.png"
+              alt="Veganlane"
+              width={160}
+              height={48}
+              className="h-10 w-auto"
+              priority
+            />
+            {/* <span
               className={`text-xl font-semibold tracking-[0.15em] uppercase transition-colors duration-500 ${
                 menuOpen
                   ? "text-foreground"
@@ -130,7 +147,7 @@ export default function Header() {
               }`}
             >
               Veganlane
-            </span>
+            </span> */}
           </Link>
 
           {/* Right nav links (desktop) */}

@@ -48,9 +48,18 @@ export default function Hero() {
         className="absolute inset-0 flex flex-col items-center justify-center will-change-transform"
         style={{ y: textY, opacity: textOpacity }}
       >
-        <span className="text-5xl font-semibold tracking-[0.2em] uppercase text-white sm:text-7xl lg:text-8xl">
+        {/* Logo image — comment out below and uncomment the span to revert to text */}
+        <Image
+          src="/images/veganlane-logo-white-transparent.png"
+          alt="Veganlane"
+          width={520}
+          height={160}
+          className="w-64 sm:w-96 lg:w-[520px]"
+          priority
+        />
+        {/* <span className="text-5xl font-semibold tracking-[0.2em] uppercase text-white sm:text-7xl lg:text-8xl">
           Veganlane
-        </span>
+        </span> */}
         <p className="mt-4 text-sm tracking-[0.3em] uppercase text-white/60 sm:text-base">
           Tervem. Ilusam. Elavam.
         </p>

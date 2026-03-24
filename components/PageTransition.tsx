@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState, useRef, useCallback } from "react";
@@ -89,15 +90,21 @@ export default function PageTransition({
             exit={{ opacity: 0 }}
             transition={{ duration: FADE_IN_DURATION, ease: "easeInOut" }}
           >
-            <motion.span
-              className="text-xl font-semibold uppercase tracking-[0.15em] text-foreground"
+            <motion.div
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
             >
-              Veganlane
-            </motion.span>
+              <Image
+                src="/images/veganlane-logo-black-transparent.png"
+                alt="Veganlane"
+                width={160}
+                height={48}
+                className="h-16 w-auto"
+                priority
+              />
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
