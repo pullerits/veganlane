@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 const navLinks = [
@@ -12,26 +13,25 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
+  const hasHero = pathname === "/";
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [hasHero, setHasHero] = useState(false);
-  const [logoVisible, setLogoVisible] = useState(true);
+  const [logoVisible, setLogoVisible] = useState(!hasHero);
 
   useEffect(() => {
-    const heroEl = document.getElementById("hero");
-    setHasHero(!!heroEl);
-    if (heroEl) setLogoVisible(false);
+    setLogoVisible(!hasHero);
 
     const onScroll = () => {
       setScrolled(window.scrollY > 10);
-      if (heroEl) {
+      if (hasHero) {
         setLogoVisible(window.scrollY > window.innerHeight * 0.4);
       }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [hasHero]);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";

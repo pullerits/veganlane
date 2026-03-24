@@ -44,7 +44,7 @@ export default async function CategoryPage({ params }: Props) {
   return (
     <>
       <section
-        className={`${bg} flex min-h-[50vh] flex-col items-center justify-center px-6 text-center text-white`}
+        className={`${bg} relative flex min-h-[50vh] flex-col items-center justify-center px-6 text-center text-white`}
       >
         <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
           {category.title}
@@ -52,7 +52,7 @@ export default async function CategoryPage({ params }: Props) {
         <p className="mt-4 max-w-md text-base leading-relaxed text-white/70">
           {category.description}
         </p>
-        <blockquote className="mt-10 max-w-lg text-sm italic leading-relaxed text-white/50">
+        <blockquote className="absolute bottom-8 max-w-lg text-sm italic leading-relaxed text-white/50">
           &ldquo;{category.quote.text}&rdquo;
           <span className="mt-2 block text-[11px] not-italic tracking-[0.1em]">
             — {category.quote.author}
