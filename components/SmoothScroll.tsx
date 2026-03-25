@@ -15,9 +15,12 @@ export default function SmoothScroll() {
     }
 
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 0.85,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: "vertical",
       smoothWheel: true,
+      syncTouch: false,
+      wheelMultiplier: 0.95,
     });
     let rafId = 0;
 

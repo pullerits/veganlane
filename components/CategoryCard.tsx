@@ -54,7 +54,7 @@ export default function CategoryCard({
         style={{ y: imageY }}
       >
         <Image
-          src={`/images/categories/${category.slug}.jpg`}
+          src={`/images/categories/${category.slug}.webp`}
           alt={category.title}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"

@@ -25,7 +25,7 @@ export default function Footer() {
           <div>
             <Link href="/">
               <Image
-                src="/images/veganlane-logo-white-transparent.png"
+                src="/images/veganlane-logo-white-transparent.webp"
                 alt="Veganlane"
                 width={160}
                 height={48}

@@ -10,10 +10,10 @@ import {
 import type { CategorySlug } from "@/lib/types";
 
 const heroImages: Record<string, string> = {
-  hommikuks: "/images/hommikusöök-hero.jpg",
+  hommikuks: "/images/hommikusöök-hero.webp",
   "lounaks-ja-ohtuks": "/images/lõuna-hero.webp",
-  magustoidud: "/images/categories/magustoit-hero.png",
-  lisandid: "/images/lisandid-hero.jpg",
+  magustoidud: "/images/categories/magustoidud-hero.webp",
+  lisandid: "/images/lisandid-hero.webp",
 };
 
 interface Props {

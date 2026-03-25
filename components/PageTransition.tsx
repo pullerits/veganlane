@@ -97,7 +97,7 @@ export default function PageTransition({
               transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
             >
               <Image
-                src="/images/veganlane-logo-black-transparent.png"
+                src="/images/veganlane-logo-black-transparent.webp"
                 alt="Veganlane"
                 width={160}
                 height={48}

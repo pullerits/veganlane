@@ -63,7 +63,7 @@ export default function Header() {
           aria-label="Mobiilne navigatsioon"
         >
           <Image
-            src="/images/veganlane-logo-black-transparent.png"
+            src="/images/veganlane-logo-black-transparent.webp"
             alt="Veganlane"
             width={160}
             height={48}
@@ -130,7 +130,7 @@ export default function Header() {
           >
             {/* Logo image — comment out below and uncomment the span to revert to text */}
             <Image
-              src="/images/veganlane-logo-black-transparent.png"
+              src="/images/veganlane-logo-black-transparent.webp"
               alt="Veganlane"
               width={160}
               height={48}

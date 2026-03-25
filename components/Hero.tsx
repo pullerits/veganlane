@@ -33,7 +33,7 @@ export default function Hero() {
         style={{ top: "-20%", bottom: "-20%", y: imageY }}
       >
         <Image
-          src="/images/hero.jpg"
+          src="/images/hero.webp"
           alt="Taimsed toidud kaunis kauses"
           fill
           className="object-cover"
@@ -54,7 +54,7 @@ export default function Hero() {
       >
         {/* Logo image — comment out below and uncomment the span to revert to text */}
         <Image
-          src="/images/veganlane-logo-white-transparent.png"
+          src="/images/veganlane-logo-white-transparent.webp"
           alt="Veganlane"
           width={520}
           height={160}

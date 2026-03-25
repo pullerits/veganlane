@@ -58,7 +58,7 @@ export default function AboutPage() {
             {/* Top-right image */}
             <div className="absolute top-0 right-0 z-10 h-[58%] w-[75%] overflow-hidden rounded-sm shadow-[0_12px_32px_rgba(26,26,26,0.14)]">
               <Image
-                src="/images/meist2.jpg"
+                src="/images/meist2.webp"
                 alt="Veganlane"
                 fill
                 className="object-cover"
@@ -69,7 +69,7 @@ export default function AboutPage() {
             {/* Bottom-left image */}
             <div className="absolute bottom-0 left-0 z-20 h-[58%] w-[75%] overflow-hidden rounded-sm shadow-[0_12px_32px_rgba(26,26,26,0.14)]">
               <Image
-                src="/images/meist1.jpg"
+                src="/images/meist1.webp"
                 alt="Veganlane"
                 fill
                 className="object-cover"
@@ -84,7 +84,7 @@ export default function AboutPage() {
       {/* ── Share section ── */}
       <div className="relative mt-24 overflow-hidden">
         <Image
-          src="/images/lisandid-hero.jpg"
+          src="/images/lisandid-hero.webp"
           alt=""
           fill
           className="object-cover"

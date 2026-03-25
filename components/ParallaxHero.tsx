@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function ParallaxHero({
   src,
@@ -14,36 +15,33 @@ export default function ParallaxHero({
   children?: React.ReactNode;
   bottomContent?: React.ReactNode;
 }) {
-  const imgRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
+  const [viewportHeight, setViewportHeight] = useState(0);
+  const { scrollY } = useScroll();
+  const imageY = useTransform(scrollY, (value) => Math.max(value, 0) * -0.15);
+  const contentY = useTransform(scrollY, (value) => Math.max(value, 0) * -0.3);
+  const contentOpacity = useTransform(scrollY, (value) => {
+    const clampedValue = Math.max(value, 0);
+
+    return viewportHeight > 0
+      ? Math.max(0, 1 - clampedValue / (viewportHeight * 0.6))
+      : 1;
+  });
 
   useEffect(() => {
-    const onScroll = () => {
-      const y = window.scrollY;
-      const vh = window.innerHeight;
+    const updateViewportHeight = () => setViewportHeight(window.innerHeight);
 
-      if (imgRef.current) {
-        imgRef.current.style.transform = `translate3d(0,${y * -0.15}px,0)`;
-      }
-      if (contentRef.current) {
-        contentRef.current.style.transform = `translate3d(0,${y * -0.3}px,0)`;
-        contentRef.current.style.opacity = String(
-          Math.max(0, 1 - y / (vh * 0.6))
-        );
-      }
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
+    updateViewportHeight();
+    window.addEventListener("resize", updateViewportHeight);
+
+    return () => window.removeEventListener("resize", updateViewportHeight);
   }, []);
 
   return (
     <>
       <div className="fixed inset-0 z-0 h-[50vh] w-full overflow-hidden">
-        <div
-          ref={imgRef}
+        <motion.div
           className="absolute inset-0 will-change-transform"
-          style={{ top: "-10%", bottom: "-10%" }}
+          style={{ top: "-10%", bottom: "-10%", y: imageY }}
         >
           <Image
             src={src}
@@ -53,12 +51,12 @@ export default function ParallaxHero({
             sizes="100vw"
             priority
           />
-        </div>
+        </motion.div>
         <div className="absolute inset-0 bg-black/40" />
 
-        <div
-          ref={contentRef}
+        <motion.div
           className="absolute inset-0 text-center text-white will-change-transform"
+          style={{ y: contentY, opacity: contentOpacity }}
         >
           <div className="flex h-full flex-col items-center justify-center px-6">
             {children}
@@ -69,7 +67,7 @@ export default function ParallaxHero({
               {bottomContent}
             </div>
           )}
-        </div>
+        </motion.div>
       </div>
 
       <div className="h-[50vh]" />
