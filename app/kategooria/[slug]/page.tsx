@@ -12,7 +12,7 @@ import type { CategorySlug } from "@/lib/types";
 const heroImages: Record<string, string> = {
   hommikuks: "/images/hommikusöök-hero.jpg",
   "lounaks-ja-ohtuks": "/images/lõuna-hero.webp",
-  magustoidud: "/images/dessert-hero.jpg",
+  magustoidud: "/images/categories/magustoit-hero.png",
   lisandid: "/images/lisandid-hero.jpg",
 };
 
